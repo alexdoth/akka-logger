@@ -1,0 +1,19 @@
+Usage:
+
+import akka.logger._
+
+Logger.enable()
+
+// need a LogActorRef in order to enable logging for that actor
+myActor = LogActorFactory.actorOf[MyActor].start()
+myActor ! Message
+
+// print the DOT graph representation of the captured interaction to standard out 
+Logger.printGraph()
+
+
+Installation:
+Just copy the code to your project
+
+Compatability:
+Akka < 2.0
